@@ -3,12 +3,12 @@ import gestion.Zona;
 
 public class Animal {
 	/* ATRIBUTOS*/
-	private static int totalAnimales;
+	private static int totalAnimales = 0;
 	private String nombre;
 	private int edad;
 	private String habitat;
 	private String genero;
-	private Zona zona;
+	private Zona[] zona = new Zona[1];
 
 	/*CONSTRUCTURES*/
 	public Animal(String nombre, int edad, String habitat, String genero) {
@@ -16,9 +16,10 @@ public class Animal {
 		this.edad = edad;
 		this.habitat = habitat;
 		this.genero = genero;
-		Animal.totalAnimales++;
+		Animal.totalAnimales += 1;
 	}
 	public Animal() {
+		Animal.totalAnimales += 1;
 		
 	}
 	
@@ -29,13 +30,6 @@ public class Animal {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public static int getTotalAnimales() {
-		return totalAnimales;
-	}
-	public void setTotalAnimales(int totalAnimales) {
-		Animal.totalAnimales = totalAnimales;
-	}
-	
 	public int getEdad() {
 		return edad;
 	}
@@ -54,10 +48,10 @@ public class Animal {
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
-	public Zona getZona() {
+	public Zona[] getZona() {
 		return zona;
 	}
-	public void setZona(Zona zona) {
+	public void setZona(Zona[] zona) {
 		this.zona = zona;}
 
 	public String movimiento() {
@@ -65,15 +59,21 @@ public class Animal {
 	}
 		
 	public static String totalPorTipo() {
-		return "Mamiferos: "+Mamifero.getListado().size()+"\nAves: "+ Ave.getListado().size()+"\nReptiles: "+ Reptil.getListado().size()+"\nPeces: "+ Pez.getListado().size()+"\nAnfibios: "+ Anfibio.getListado().size();
+		int cantidadAves = Ave.cantidadAves();
+		int cantidadAnfibios = Anfibio.cantidadAnfibios();
+		int cantidadPeces = Pez.cantidadPeces();
+		int cantidadReptiles = Reptil.cantidadReptiles();
+		int cantidadMamiferos = Mamifero.cantidadMamiferos();
+		return "Mamiferos: "+cantidadMamiferos+"\nAves: "+ cantidadAves +"\nReptiles: "+cantidadReptiles+"\nPeces: "+ cantidadPeces +"\nAnfibios: "+ cantidadAnfibios;
 		}
 		
 	public String toString() {
-		if (this.zona!=null) {
-			return ("Mi nombre es "+ this.nombre+", tengo una edad de "+this.edad+", habito en "+ this.habitat+" y mi genero es "+this.genero+", la zona en la que me ubico es"+ this.zona.getNombre()+", en el "+ this.zona.getZoo().getNombre());}
-			
-		else {
-			return ("Mi nombre es "+ this.nombre+", tengo una edad de "+this.edad+", habito en "+ this.habitat+" y mi genero es "+this.genero);
-			}
+		String zonaZoo = "";
+		if (zona[0] != null && zona[0].getZoo()!= null) {
+			zonaZoo = ", la zona en la que me ubico es "+this.zona[0]+", en el "+ this.zona[0].getZoo(); 
+		return "Mi nombre es " + this.nombre + ", tengo una edad de "+this.edad+
+			        ", habito en " + this.habitat + " y mi genero es " + this.genero + zonaZoo;
+		}
+		return zonaZoo;
 	}
-}
+}	

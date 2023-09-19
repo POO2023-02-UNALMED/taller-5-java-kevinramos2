@@ -1,4 +1,5 @@
 package zooAnimales;
+import gestion.Zona;
 
 public class Animal {
 	/* ATRIBUTOS*/
@@ -7,6 +8,18 @@ public class Animal {
 	private int edad;
 	private String habitat;
 	private String genero;
-	/* array de la zona */
+	private Zona zona;
 
+	/*CONSTRUCTURES*/
+	public Animal(int totalAnimales, String nombre, int edad, String habitat, String genero, Zona zona) {
+		this.totalAnimales = totalAnimales;
+		this.nombre = nombre;
+		this.edad = edad;
+		this.habitat = habitat;
+		this.genero = genero;
+		this.zona = zona;
+	}
+	public Animal() {
+		
+	}
 }

@@ -8,5 +8,13 @@ public class Zona {
 	private Zoologico zoo;
 	private  List<Zona> zonaList = new ArrayList<Zona>();
 	
+	/*CONSTRUCTURES*/
+	public Zona(String nombre, Zoologico zoo) {
+		this.nombre = nombre;
+		this.zoo = zoo;
+	}
+	public Zona() {
+		
+	}
 
 }

@@ -2,15 +2,15 @@ package zooAnimales;
 import java.util.ArrayList;
 
 public class Anfibio extends Animal{
-	/* ATRIBUTOS*/
-	private static  ArrayList<Anfibio> listado =new ArrayList<>();
+	// ATRIBUTOS
+	private static  ArrayList<Anfibio> listado =new ArrayList<Anfibio>();
 	public static int ranas;
 	public static int salamandras;
 	private String colorPiel;
 	private boolean venenoso;
 	private static int cantidadAnfibios = 0;
 
-	/*CONSTRUCTURES*/
+	//CONSTRUCTURES
 	public Anfibio(String nombre,int edad, String habitat,String genero, String colorPiel, boolean venenoso) {
 		super(nombre,edad,habitat,genero);
 		this.colorPiel = colorPiel;
@@ -29,7 +29,7 @@ public class Anfibio extends Animal{
 		Anfibio.cantidadAnfibios += 1;
 	}
 	
-	/*METODOS*/
+	//METODOS
 	public static ArrayList<Anfibio> getListado() {
 		return Anfibio.listado;
 	}

@@ -2,28 +2,27 @@ package zooAnimales;
 import gestion.Zona;
 
 public class Animal {
-	/* ATRIBUTOS*/
-	private static int totalAnimales = 0;
+	// ATRIBUTOS
+	private static int total = 0;
 	private String nombre;
 	private int edad;
 	private String habitat;
 	private String genero;
 	private Zona[] zona = new Zona[1];
 
-	/*CONSTRUCTURES*/
+	//CONSTRUCTURES
 	public Animal(String nombre, int edad, String habitat, String genero) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
 		this.genero = genero;
-		Animal.totalAnimales += 1;
+		Animal.total += 1;
 	}
 	public Animal() {
-		Animal.totalAnimales += 1;
-		
+		Animal.total += 1;
 	}
 	
-	/*METODOS*/
+	//METODOS
 	public String getNombre() {
 		return nombre;
 	}
@@ -53,6 +52,9 @@ public class Animal {
 	}
 	public void setZona(Zona[] zona) {
 		this.zona = zona;}
+	public static int getTotalAnimales() {
+		return Animal.total;
+	}
 
 	public String movimiento() {
 		return "desplazarse";
@@ -73,7 +75,8 @@ public class Animal {
 			zonaZoo = ", la zona en la que me ubico es "+this.zona[0]+", en el "+ this.zona[0].getZoo(); 
 		return "Mi nombre es " + this.nombre + ", tengo una edad de "+this.edad+
 			        ", habito en " + this.habitat + " y mi genero es " + this.genero + zonaZoo;
-		}
+
+	}
 		return zonaZoo;
 	}
-}	
+}

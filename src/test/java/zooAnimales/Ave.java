@@ -2,14 +2,14 @@ package zooAnimales;
 import java.util.ArrayList;
 
 public class Ave extends Animal{
-	/* ATRIBUTOS*/
+	// ATRIBUTOS
 	private  static ArrayList<Ave> listado =new ArrayList<Ave>();
 	public static int halcones;
 	public static int aguilas;
 	private String colorPlumas;
 	private static int cantidadAves = 0;
 	
-	/*CONSTRUCTURES*/
+	// CONSTRUCTURES
 	public Ave(String nombre,int edad, String habitat,String genero, String colorPlumas) {
 		super(nombre,edad,habitat,genero);
 		this.colorPlumas = colorPlumas;
@@ -26,7 +26,7 @@ public class Ave extends Animal{
 		Ave.listado.add(this);
 	}
 	
-	/*METODOS*/
+	// METODOS
 	public String getColorPlumas() {
 		return this.colorPlumas;
 	}
@@ -41,12 +41,12 @@ public class Ave extends Animal{
 		return "volar";
 	}
 	public static Ave crearHalcon(String nombre,int edad,String genero) {
-		Ave.halcones += 1;
+		halcones += 1;
 		Ave halcon = new Ave(nombre,edad,"montanas",genero,"cafe glorioso");
 		return halcon;
 	}	
 	public static Ave crearAguila(String nombre,int edad,String genero){
-		Ave.aguilas += 1;
+		aguilas += 1;
 		Ave aguila = new Ave(nombre,edad,"montanas",genero,"blanco y amarillo");
 		return aguila;
 	}

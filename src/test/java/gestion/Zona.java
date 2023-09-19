@@ -3,12 +3,12 @@ import java.util.ArrayList;
 import zooAnimales.Animal;
 
 public class Zona {
-	/* ATRIBUTOS*/
+	//ATRIBUTOS
 	private String nombre;
 	private Zoologico[] zoo = new Zoologico[1];
 	private  ArrayList<Animal> animales = new ArrayList<Animal>();
 	
-	/*CONSTRUCTURES*/
+	//CONSTRUCTURES
 	public Zona(String nombre, Zoologico zoo) {
 		this.nombre = nombre;
 		this.zoo[0] = zoo;
@@ -17,7 +17,7 @@ public class Zona {
 		
 	}
 	
-	/*METODOS*/
+	//METODOS
 	public String getNombre() {
 		return nombre;
 	}

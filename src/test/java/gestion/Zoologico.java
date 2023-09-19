@@ -6,7 +6,7 @@ public class Zoologico {
 	/* ATRIBUTOS*/
 	private String nombre;
 	private String ubicacion;
-	/*private acá va la lista */
+	private  List<Zona> zonaList = new ArrayList<Zona>();
 	
 
 }

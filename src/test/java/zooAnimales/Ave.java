@@ -10,10 +10,8 @@ public class Ave extends Animal{
 	private static int cantidadAves = 0;
 	
 	// CONSTRUCTURES
-	public Ave(String nombre,int edad, String habitat,String genero, String colorPlumas) {
-		super(nombre,edad,habitat,genero);
-		this.colorPlumas = colorPlumas;
-		Ave.cantidadAves += 1;
+	public Ave() {
+		cantidadAves += 1;
 		Ave.listado.add(this);
 	}
 	public Ave(String colorPlumas) {
@@ -21,8 +19,10 @@ public class Ave extends Animal{
 		Ave.cantidadAves += 1;
 		Ave.listado.add(this);
 	}
-	public Ave() {
-		cantidadAves += 1;
+	public Ave(String nombre,int edad, String habitat,String genero, String colorPlumas) {
+		super(nombre,edad,habitat,genero);
+		this.colorPlumas = colorPlumas;
+		Ave.cantidadAves += 1;
 		Ave.listado.add(this);
 	}
 	

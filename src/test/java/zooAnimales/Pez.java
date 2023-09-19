@@ -11,10 +11,7 @@ public class Pez extends Animal {
 	private static int cantidadPeces = 0;
 	
 	// CONSTRUCTORES
-	public Pez(String nombre,int edad, String habitat,String genero ,String colorEscamas, int  cantidadAletas) {
-		super(nombre, edad, habitat, genero);
-		this.colorEscamas = colorEscamas;
-		this.cantidadAletas = cantidadAletas;
+	public Pez() {
 		Pez.cantidadPeces += 1;
 		Pez.listado.add(this);
 	}
@@ -24,10 +21,15 @@ public class Pez extends Animal {
 		Pez.cantidadPeces += 1;
 		Pez.listado.add(this);
 	}
-	public Pez() {
+	public Pez(String nombre,int edad, String habitat,String genero ,String colorEscamas, int  cantidadAletas) {
+		super(nombre, edad, habitat, genero);
+		this.colorEscamas = colorEscamas;
+		this.cantidadAletas = cantidadAletas;
 		Pez.cantidadPeces += 1;
 		Pez.listado.add(this);
 	}
+
+
 	
 	// METODOS
 	public String getColorEscamas() {

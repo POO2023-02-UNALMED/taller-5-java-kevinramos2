@@ -11,6 +11,16 @@ public class Anfibio extends Animal{
 	private static int cantidadAnfibios = 0;
 
 	//CONSTRUCTURES
+	public Anfibio() {
+		Anfibio.listado.add(this);
+		Anfibio.cantidadAnfibios += 1;
+	}
+	public Anfibio(String colorPiel, boolean venenoso) {
+		this.colorPiel = colorPiel;
+		this.venenoso = venenoso;
+		Anfibio.listado.add(this);
+		Anfibio.cantidadAnfibios += 1;
+	}
 	public Anfibio(String nombre,int edad, String habitat,String genero, String colorPiel, boolean venenoso) {
 		super(nombre,edad,habitat,genero);
 		this.colorPiel = colorPiel;
@@ -18,17 +28,7 @@ public class Anfibio extends Animal{
 		Anfibio.listado.add(this);
 		Anfibio.cantidadAnfibios += 1;
 		}
-	public Anfibio(String colorPiel, boolean venenoso) {
-		this.colorPiel = colorPiel;
-		this.venenoso = venenoso;
-		Anfibio.listado.add(this);
-		Anfibio.cantidadAnfibios += 1;
-	}
-	public Anfibio() {
-		Anfibio.listado.add(this);
-		Anfibio.cantidadAnfibios += 1;
-	}
-	
+
 	//METODOS
 	public static ArrayList<Anfibio> getListado() {
 		return Anfibio.listado;

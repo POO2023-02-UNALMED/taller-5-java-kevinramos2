@@ -9,13 +9,14 @@ public class Zona {
 	private  ArrayList<Animal> animales = new ArrayList<Animal>();
 	
 	//CONSTRUCTURES
+	public Zona() {
+		
+	}
 	public Zona(String nombre, Zoologico zoo) {
 		this.nombre = nombre;
 		this.zoo[0] = zoo;
 	}
-	public Zona() {
-		
-	}
+
 	
 	//METODOS
 	public String getNombre() {

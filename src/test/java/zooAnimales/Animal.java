@@ -11,14 +11,14 @@ public class Animal {
 	private Zona[] zona = new Zona[1];
 
 	//CONSTRUCTURES
+	public Animal() {
+		Animal.total += 1;
+	}
 	public Animal(String nombre, int edad, String habitat, String genero) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
 		this.genero = genero;
-		Animal.total += 1;
-	}
-	public Animal() {
 		Animal.total += 1;
 	}
 	

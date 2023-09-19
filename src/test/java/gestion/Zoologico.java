@@ -8,13 +8,14 @@ public class Zoologico {
 	private ArrayList<Zona> zonas = new ArrayList<Zona>();
 	
 	//CONSTRUCTURES
+	public Zoologico() {
+		
+	}
 	public Zoologico (String nombre, String ubicacion) {
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;
 	}
-	public Zoologico() {
-		
-	}
+
 	
 	//METODOS
 	public String getNombre() {

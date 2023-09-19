@@ -11,10 +11,7 @@ public class Reptil extends Animal {
 	private static int cantidadReptiles = 0;
 	
 	// CONSTRUCTURES
-	public Reptil(String nombre,int edad, String habitat,String genero ,String colorEscamas, int  largoCola) {
-		super(nombre, edad, habitat, genero);
-		this.colorEscamas = colorEscamas;
-		this.largoCola = largoCola;
+	public Reptil() {
 		Reptil.cantidadReptiles += 1;
 		Reptil.listado.add(this);
 	}
@@ -24,11 +21,14 @@ public class Reptil extends Animal {
 		Reptil.cantidadReptiles += 1;
 		Reptil.listado.add(this);
 	}
-	public Reptil() {
+	public Reptil(String nombre,int edad, String habitat,String genero ,String colorEscamas, int  largoCola) {
+		super(nombre, edad, habitat, genero);
+		this.colorEscamas = colorEscamas;
+		this.largoCola = largoCola;
 		Reptil.cantidadReptiles += 1;
 		Reptil.listado.add(this);
 	}
-	
+
 	// METODOS
 	public String getColorEscamas() {
 		return this.colorEscamas;

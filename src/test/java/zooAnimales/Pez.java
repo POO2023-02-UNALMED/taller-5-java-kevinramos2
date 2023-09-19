@@ -1,61 +1,61 @@
 package zooAnimales;
-import java.util.List;
 import java.util.ArrayList;
 
 public class Pez extends Animal {
 	/* ATRIBUTOS*/
-	private static List<Pez> listado =new ArrayList<>();
+	private static ArrayList<Pez> listado =new ArrayList<Pez>();
 	public static int salmones;
 	public static int bacalaos;
 	private String colorEscamas;
 	private int cantidadAletas;
+	private static int cantidadPeces = 0;
 	
 	/*CONSTRUCTORES*/
 	public  Pez(String nombre,int edad, String habitat,String genero ,String colorEscamas, int  cantidadAletas) {
-		
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
+		super(nombre, edad, habitat, genero);
 		this.colorEscamas = colorEscamas;
 		this.cantidadAletas = cantidadAletas;
+		Pez.cantidadPeces += 1;
+		Pez.listado.add(this);
+	}
+	public Pez(String colorEscamas, int cantidadAletas) {
+		this.colorEscamas = colorEscamas;
+		this.cantidadAletas = cantidadAletas;
+		Pez.cantidadPeces += 1;
 		Pez.listado.add(this);
 	}
 	public  Pez() {
+		Pez.cantidadPeces += 1;
 		Pez.listado.add(this);
 	}
 	
 	/*MÉTODOS*/	
 	public String getColorEscamas() {
-		return colorEscamas;
+		return this.colorEscamas;
 	}
 	public void setColorEscamas(String colorEscamas) {
 		this.colorEscamas = colorEscamas;
 	}
 	public int getCantidadAletas() {
-		return cantidadAletas;
+		return this.cantidadAletas;
 	}
 	public void setCantidadAletas(int cantidadAletas) {
 		this.cantidadAletas = cantidadAletas;
 	}
-	public static List<Pez> getListado() {
-		return listado;
-	}
-	public static void setListado(List<Pez> listado) {
-		Pez.listado = listado;
-	}
-	public int cantidadPeces() {
-		return listado.size();
+	public static int cantidadPeces() {
+		return Pez.cantidadPeces;
 	}
 	public String movimiento() {
 		return "nadar";
 	}
 	public static Animal crearSalmon(String nombre,int edad,String genero ) {
-		Pez.salmones++;
-		return new Pez(nombre,edad,"oceano",genero,"rojo",6);
+		Pez.salmones += 1;
+		Pez salmon = new Pez(nombre,edad,"oceano",genero,"rojo",6);
+		return salmon;
 	}
 	public static Animal crearBacalao(String nombre,int edad,String genero ){
-		Pez.bacalaos++;
-		return new Pez(nombre,edad,"oceano",genero,"gris",6);
+		Pez.bacalaos += 1;
+		Pez bacalao = new Pez(nombre,edad,"oceano",genero,"gris",6);
+		return bacalao;
 	}
 }

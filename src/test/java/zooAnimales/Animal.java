@@ -11,7 +11,7 @@ public class Animal {
 	private Zona zona;
 
 	/*CONSTRUCTURES*/
-	public Animal(int totalAnimales, String nombre, int edad, String habitat, String genero) {
+	public Animal(String nombre, int edad, String habitat, String genero) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
@@ -26,15 +26,16 @@ public class Animal {
 	public String getNombre() {
 		return nombre;
 	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 	public static int getTotalAnimales() {
 		return totalAnimales;
 	}
 	public void setTotalAnimales(int totalAnimales) {
 		Animal.totalAnimales = totalAnimales;
 	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+	
 	public int getEdad() {
 		return edad;
 	}

@@ -27,6 +27,9 @@ public class Ave extends Animal{
 	}
 	
 	// METODOS
+	public static ArrayList<Ave> getListado(){
+        return Ave.listado;
+    }
 	public String getColorPlumas() {
 		return this.colorPlumas;
 	}

@@ -23,7 +23,7 @@ public class Animal {
 		
 	}
 	
-	/*Métodos*/
+	/*METODOS*/
 	public String getNombre() {
 		return nombre;
 	}

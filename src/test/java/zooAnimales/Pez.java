@@ -29,7 +29,7 @@ public class Pez extends Animal {
 		Pez.listado.add(this);
 	}
 	
-	/*MÉTODOS*/	
+	/*METODOS*/	
 	public String getColorEscamas() {
 		return this.colorEscamas;
 	}

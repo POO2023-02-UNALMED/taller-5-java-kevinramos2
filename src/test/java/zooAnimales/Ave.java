@@ -26,7 +26,7 @@ public class Ave extends Animal{
 		Ave.listado.add(this);
 	}
 	
-	/*MÉTODOS*/
+	/*METODOS*/
 	public String getColorPlumas() {
 		return this.colorPlumas;
 	}

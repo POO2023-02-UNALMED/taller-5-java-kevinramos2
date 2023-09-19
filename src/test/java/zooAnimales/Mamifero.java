@@ -29,7 +29,7 @@ public class Mamifero extends Animal {
 		Mamifero.listado.add(this);
 	}
 	
-	/*MÉTODOS*/
+	/*METODOS*/
 	
 	public boolean isPelaje() {
 		return this.pelaje;

@@ -17,7 +17,7 @@ public class Zona {
 		
 	}
 	
-	/*MÉTODOS*/
+	/*METODOS*/
 	public String getNombre() {
 		return nombre;
 	}

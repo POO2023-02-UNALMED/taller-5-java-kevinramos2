@@ -16,7 +16,7 @@ public class Zoologico {
 		
 	}
 	
-	/*MÉTODOS*/
+	/*METODOS*/
 	public String getNombre() {
 		return nombre;
 	}

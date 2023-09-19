@@ -29,7 +29,7 @@ public class Anfibio extends Animal{
 		Anfibio.cantidadAnfibios += 1;
 	}
 	
-	/*MÉTODOS*/
+	/*METODOS*/
 	public static ArrayList<Anfibio> getListado() {
 		return Anfibio.listado;
 	}

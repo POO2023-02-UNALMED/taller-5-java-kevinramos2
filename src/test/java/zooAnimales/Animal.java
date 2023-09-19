@@ -3,7 +3,7 @@ import gestion.Zona;
 
 public class Animal {
 	// ATRIBUTOS
-	private static int total = 0;
+	private static int totalAnimales = 0;
 	private String nombre;
 	private int edad;
 	private String habitat;
@@ -12,14 +12,14 @@ public class Animal {
 
 	//CONSTRUCTURES
 	public Animal() {
-		Animal.total += 1;
+		Animal.totalAnimales += 1;
 	}
 	public Animal(String nombre, int edad, String habitat, String genero) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
 		this.genero = genero;
-		Animal.total += 1;
+		Animal.totalAnimales += 1;
 	}
 	
 	//METODOS
@@ -53,9 +53,8 @@ public class Animal {
 	public void setZona(Zona[] zona) {
 		this.zona = zona;}
 	public static int getTotalAnimales() {
-		return Animal.total;
+		return Animal.totalAnimales;
 	}
-
 	public String movimiento() {
 		return "desplazarse";
 	}
@@ -69,14 +68,12 @@ public class Animal {
 		return "Mamiferos: "+cantidadMamiferos+"\nAves: "+ cantidadAves +"\nReptiles: "+cantidadReptiles+"\nPeces: "+ cantidadPeces +"\nAnfibios: "+ cantidadAnfibios;
 		}
 		
-	public String toString() {
-		String zonaZoo = "";
-		if (zona[0] != null && zona[0].getZoo()!= null) {
-			zonaZoo = ", la zona en la que me ubico es "+this.zona[0]+", en el "+ this.zona[0].getZoo(); 
-		return "Mi nombre es " + this.nombre + ", tengo una edad de "+this.edad+
-			        ", habito en " + this.habitat + " y mi genero es " + this.genero + zonaZoo;
-
-	}
-		return zonaZoo;
-	}
+    public String toString(){
+        String zonZoo = "";
+        if(zona[0] != null && zona[0].getZoologico() != null){
+            zonZoo = ", la zona en la que me ubico es "+this.zona[0]+", en el "+ this.zona[0].getZoologico();
+        }
+        return "Mi nombre es " + this.nombre + ", tengo una edad de "+this.edad+
+        ", habito en " + this.habitat + " y mi genero es " + this.genero + zonZoo;
+    }
 }

@@ -32,6 +32,9 @@ public class Pez extends Animal {
 
 	
 	// METODOS
+	public static ArrayList<Pez> getListado(){
+        return Pez.listado;
+    }
 	public String getColorEscamas() {
 		return this.colorEscamas;
 	}

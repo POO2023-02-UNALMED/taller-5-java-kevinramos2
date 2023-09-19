@@ -1,74 +1,71 @@
 package zooAnimales;
+
 import gestion.Zona;
 
 public class Animal {
-	// ATRIBUTOS
-	private static int totalAnimales = 0;
-	private String nombre;
-	private int edad;
-	private String habitat;
-	private String genero;
-	private Zona[] zona = new Zona[1];
+    private static int totalAnimales = 0;
+    protected String nombre;
+    protected int edad;
+    protected String habitat;
+    protected String genero;
+    protected Zona[] zona = new Zona[1];
 
-	//CONSTRUCTURES
-	public Animal() {
-		Animal.totalAnimales += 1;
-	}
-	public Animal(String nombre, int edad, String habitat, String genero) {
-		this.nombre = nombre;
-		this.edad = edad;
-		this.habitat = habitat;
-		this.genero = genero;
-		Animal.totalAnimales += 1;
-	}
-	
-	//METODOS
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public int getEdad() {
-		return edad;
-	}
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
-	public String getHabitat() {
-		return habitat;
-	}
-	public void setHabitat(String habitat) {
-		this.habitat = habitat;
-	}
-	public String getGenero() {
-		return genero;
-	}
-	public void setGenero(String genero) {
-		this.genero = genero;
-	}
-	public Zona[] getZona() {
-		return zona;
-	}
-	public void setZona(Zona[] zona) {
-		this.zona = zona;}
-	public static int getTotalAnimales() {
-		return Animal.totalAnimales;
-	}
-	public String movimiento() {
-		return "desplazarse";
-	}
-		
-	public static String totalPorTipo() {
-		int cantidadAves = Ave.cantidadAves();
-		int cantidadAnfibios = Anfibio.cantidadAnfibios();
-		int cantidadPeces = Pez.cantidadPeces();
-		int cantidadReptiles = Reptil.cantidadReptiles();
-		int cantidadMamiferos = Mamifero.cantidadMamiferos();
-		 return "Mamiferos: "+cantidadMamiferos+"\nAves: "+cantidadAves+"\nReptiles: "+cantidadReptiles+
-			        "\nPeces: "+cantidadPeces+"\nAnfibios: "+cantidadAnfibios;
-		}
-		
+    public Animal(){
+        Animal.totalAnimales += 1;
+    }
+    public Animal(String nombre, int edad, String habitat, String genero){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.habitat = habitat;
+        this.genero = genero;
+        Animal.totalAnimales += 1;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public int getEdad() {
+        return edad;
+    }
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    public String getHabitat() {
+        return habitat;
+    }
+    public void setHabitat(String habitat) {
+        this.habitat = habitat;
+    }
+    public String getGenero() {
+        return genero;
+    }
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+    public Zona[] getZona() {
+        return zona;
+    }
+    public void setZona(Zona[] zona) {
+        this.zona = zona;
+    }
+    public static int getTotalAnimales(){
+        return Animal.totalAnimales;
+    }
+    public String movimiento(){
+        return "desplazarse";
+    }
+    public static String totalPorTipo(){
+        int cantidadMamiferos = Mamifero.cantidadMamiferos();
+        int cantidadAves = Ave.cantidadAves();
+        int cantidadReptiles = Reptil.cantidadReptiles();
+        int cantidadPeces = Pez.cantidadPeces();
+        int cantidadAnfibios = Anfibio.cantidadAnfibios();
+        return "Mamiferos: "+cantidadMamiferos+"\nAves: "+cantidadAves+"\nReptiles: "+cantidadReptiles+
+        "\nPeces: "+cantidadPeces+"\nAnfibios: "+cantidadAnfibios;
+    }
     public String toString(){
         String zonZoo = "";
         if(zona[0] != null && zona[0].getZoologico() != null){

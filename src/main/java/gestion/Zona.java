@@ -8,7 +8,6 @@ public class Zona {
     private Zoologico[] zoo = new Zoologico[1];
     private ArrayList<Animal> animales = new ArrayList<Animal>();
 
-    //constructures
     public Zona(){
     	
     }
@@ -16,11 +15,10 @@ public class Zona {
         this.nombre = nombre;
         this.zoo[0] = zoo;
     }
-
-    //metodos
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

@@ -21,14 +21,20 @@ public class Zoologico {
 	public String getNombre() {
 		return nombre;
 	}
-	public void setNombre() {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	public String getUbicacion() {
 		return ubicacion;
 	}
-	public void setUbicacion() {
+	public void setUbicacion(String ubicacion) {
 		this.ubicacion = ubicacion;
+	}
+	public List<Zona> getZona() {
+		return zonaList;
+	}
+	public void setZona(List<Zona> zonaList) {
+		this.zonaList = zonaList;
 	}
 	
 	public void agregarZona(Zona zona) {

@@ -30,6 +30,9 @@ public class Reptil extends Animal {
 	}
 
 	// METODOS
+	public static ArrayList<Reptil> getListado(){
+        return Reptil.listado;
+    }
 	public String getColorEscamas() {
 		return this.colorEscamas;
 	}

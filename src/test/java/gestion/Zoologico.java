@@ -16,5 +16,30 @@ public class Zoologico {
 	public Zoologico() {
 		
 	}
+	
+	/*MÉTODOS*/
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre() {
+		this.nombre = nombre;
+	}
+	public String getUbicacion() {
+		return ubicacion;
+	}
+	public void setUbicacion() {
+		this.ubicacion = ubicacion;
+	}
+	
+	public void agregarZona(Zona zona) {
+		this.zonaList.add(zona);
+	}
+	public int cantidadTotalAnimales() {
+		int totalAnimales = 0;
+		for(Zona zona: zonaList) {
+			totalAnimales+=zona.cantidadAnimales();
+		}
+		return totalAnimales;
+	}
 
 }
